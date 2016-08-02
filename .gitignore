@@ -1,5 +1,6 @@
 .vscode
 bin
+coverage
 # Logs
 logs
 *.log
