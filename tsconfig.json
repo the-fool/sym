@@ -10,18 +10,7 @@
     "lib": ["es6", "dom"],
     "strictNullChecks": false,
     "baseUrl": "./src",
-    "paths": [],
-    "types": [
-      "core-js",
-      "hammerjs",
-      "jasmine",
-      "node",
-      "protractor",
-      "selenium-webdriver",
-      "source-map",
-      "uglify-js",
-      "webpack"
-    ]
+    "paths": []
   },
   "exclude": [
     "node_modules",

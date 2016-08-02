@@ -159,10 +159,18 @@ module.exports = {
        * Returns file content as string
        *
        */
+      { test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g)(\?v=[0-9]\.[0-9]\.[0-9])?$/i,
+        loaders: ['url-loader?limit=100000']
+      },
+      {
+        test: '/\.svg(\?v=[0-9]\.[0-9]\.[0-9])?$/i',
+        loaders: 'svg-url-loader'
+      },
       {
         test: /\.css$/,
-        loaders: ['to-string-loader', 'css-loader']
+        loaders: ['css-to-string-loader', 'css-loader']
       },
+      { test: /\.jpg$/, loader: "file-loader" },
 
       /* Raw loader support for *.html
        * Returns file content as string
@@ -185,6 +193,12 @@ module.exports = {
    * See: http://webpack.github.io/docs/configuration.html#plugins
    */
   plugins: [
+
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery'
+    }),
 
     /*
      * Plugin: ForkCheckerPlugin

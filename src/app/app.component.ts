@@ -1,10 +1,12 @@
+import 'semantic-ui-css/semantic.css';
+import 'semantic-ui-css/semantic.js';
+
 /*
  * Angular 2 decorators and services
  */
 import { Component, ViewEncapsulation } from '@angular/core';
-
+import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from 'ng-semantic';
 import { AppState } from './app.service';
-
 /*
  * App Component
  * Top Level Component
