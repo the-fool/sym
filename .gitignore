@@ -1,6 +1,7 @@
 .vscode
 bin
 coverage
+obj
 # Logs
 logs
 *.log

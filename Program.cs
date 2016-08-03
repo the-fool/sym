@@ -15,10 +15,10 @@ namespace symphony
         {
             var config = new ConfigurationBuilder()
                 .AddCommandLine(args)
-		        .AddJsonFile("hosting.json", optional: true)
+		            .AddJsonFile("hosting.json", optional: true)
                 .AddEnvironmentVariables(prefix: "ASPNETCORE_")
                 .Build();
-            
+
             var host = new WebHostBuilder()
 	    	.UseUrls("http://*:1000", "https://*:1234", "http://0.0.0.0:5000")
 	    	.UseConfiguration(config)
